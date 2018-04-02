@@ -5,6 +5,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 describe("AppComponent", () => {
   let fixture: ComponentFixture<AppComponent>;
   let app: any;
+  let compiled: any;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -16,8 +17,9 @@ describe("AppComponent", () => {
       ]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(AppComponent);
-    app     = fixture.debugElement.componentInstance;
+    fixture  = TestBed.createComponent(AppComponent);
+    app      = fixture.debugElement.componentInstance;
+    compiled = fixture.debugElement.nativeElement;
 
     fixture.detectChanges();
   }));
@@ -32,8 +34,11 @@ describe("AppComponent", () => {
     }));
 
     it("has a navigation menu", async(() => {
-      const compiled = fixture.debugElement.nativeElement;
       expect(compiled.querySelector("app-nav-menu")).toBeTruthy();
+    }));
+
+    it("has a footer component", async(() => {
+      expect(compiled.querySelector("app-footer")).toBeTruthy();
     }));
   });
 });
