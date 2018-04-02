@@ -1,0 +1,11 @@
+$colours: (
+    "primary": red,
+    "accent": pink,
+    "secondary": blue,
+    "foreground": darkgrey,
+    "background": magenta 
+);
+
+@function palette($key: "primary") {
+    @return map-get($colours, $key);
+}
