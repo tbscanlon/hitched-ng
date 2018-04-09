@@ -1,11 +1,20 @@
-$colours: (
-    "primary": red,
-    "accent": pink,
-    "secondary": blue,
-    "foreground": darkgrey,
-    "background": magenta 
-);
+$primary:   #6f42c1;
+$secondary: #e83e8c;
+$white:     #ffffff;
+$black:     #000000;
 
-@function palette($key: "primary") {
-    @return map-get($colours, $key);
-}
+$body-bg: $black;
+
+$navbar-dark-hover-color:           rgba($white, .75);
+$navbar-dark-hover-color:           rgba($white, .75);
+$navbar-dark-active-color:          $white;
+$navbar-dark-disabled-color:        rgba($white, .25);
+$navbar-dark-toggler-border-color:  rgba($white, .1);
+
+$theme-colors: (
+    "primary":   $primary,
+    "secondary": $secondary
+);
+    
+// TODO: Adjust container padding (make it less)
+@import "../../node_modules/bootstrap/scss/bootstrap";
