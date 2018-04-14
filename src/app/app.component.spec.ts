@@ -37,6 +37,10 @@ describe("AppComponent", () => {
       expect(compiled.querySelector("app-nav-menu")).toBeTruthy();
     }));
 
+    it("has a router outlet", () => {
+      expect(compiled.querySelector("router-outlet")).toBeTruthy();
+    });
+
     it("has a footer component", async(() => {
       expect(compiled.querySelector("app-footer")).toBeTruthy();
     }));

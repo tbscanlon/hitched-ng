@@ -5,7 +5,8 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { AppComponent } from "./app.component";
 import { NavMenuComponent } from "./components/nav-menu/nav-menu.component";
 import { FooterComponent } from "./components/footer/footer.component";
-import { HeroBannerComponent } from './components/hero-banner/hero-banner.component';
+import { HeroBannerComponent } from "./components/hero-banner/hero-banner.component";
+import { AppRoutingModule } from "./app-routing/app-routing.module";
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { HeroBannerComponent } from './components/hero-banner/hero-banner.compon
   ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     NgbModule.forRoot()
   ],
   providers: [],
