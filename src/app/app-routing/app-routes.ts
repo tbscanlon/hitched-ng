@@ -1,10 +1,10 @@
 import { Routes } from "@angular/router";
 
-import { HeroBannerComponent } from "../components/hero-banner/hero-banner.component";
+import { HomeComponent } from "../views/home/home.component";
 
 export const routes: Routes = [
   {
     path: "",
-    component: HeroBannerComponent
+    component: HomeComponent
   }
 ];

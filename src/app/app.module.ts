@@ -1,12 +1,19 @@
+// Core
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
+// Routing
+import { AppRoutingModule } from "./app-routing/app-routing.module";
+
+// Components
 import { AppComponent } from "./app.component";
 import { NavMenuComponent } from "./components/nav-menu/nav-menu.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { HeroBannerComponent } from "./components/hero-banner/hero-banner.component";
-import { AppRoutingModule } from "./app-routing/app-routing.module";
+
+// Views
+import { HomeComponent } from "./views/home/home.component";
 
 
 @NgModule({
@@ -14,7 +21,8 @@ import { AppRoutingModule } from "./app-routing/app-routing.module";
     AppComponent,
     NavMenuComponent,
     FooterComponent,
-    HeroBannerComponent
+    HeroBannerComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
