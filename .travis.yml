@@ -30,6 +30,7 @@ script:
   - ng e2e
 
 after_success:
-  - ng build --prod
-  - firebase use hitched-ng
-  - firebase deploy --token $FIREBASE_TOKEN
+  if: branch = master
+    - ng build --prod
+    - firebase use hitched-ng
+    - firebase deploy --token $FIREBASE_TOKEN
